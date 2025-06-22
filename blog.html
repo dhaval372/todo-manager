@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <main class="max-w-3xl mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-6 text-center">Blog Manager</h1>
+
+    <!-- Blog Form -->
+    <section class="bg-white rounded shadow p-4 mb-6">
+      <h2 class="text-xl font-semibold mb-3">New Blog Post</h2>
+      <form id="blogForm" class="space-y-3">
+        <input type="text" id="title" placeholder="Blog Title" required
+          class="w-full p-2 border rounded" />
+
+        <textarea id="content" placeholder="Blog Content" rows="5" required
+          class="w-full p-2 border rounded"></textarea>
+
+        <input type="text" id="tags" placeholder="Tags (comma separated)"
+          class="w-full p-2 border rounded" />
+
+        <button type="submit"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          Publish
+        </button>
+      </form>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="mb-4">
+      <input type="text" id="searchInput" placeholder="Search by title or tag"
+        class="w-full p-2 border rounded" />
+    </section>
+
+    <!-- Blog Post List -->
+    <section id="postList" class="space-y-4">
+      <!-- Blog posts will be injected here -->
+    </section>
+  </main>
+
+  <script src="js/blog.js"></script>
+</body>
+</html>
